@@ -1,0 +1,6 @@
+[submodule "qtile"]
+	path = qtile
+	url = git@github.com:laomuon/Qtile-dot.git
+[submodule "nvim"]
+	path = nvim
+	url = git@github.com:laomuon/nvim-dotfiles.git
