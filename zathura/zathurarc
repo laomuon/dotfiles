@@ -1,7 +1,9 @@
 set selection-clipboard clipboard
 set incremental-search true
+set synctex true
+set synctex-editor-command "nvim --headless -c 'VimtexInverseSearch %l '%f''"
 
-set font "FiraCode Nerd Font Mono"
+set font "FiraCode Nerd Font Mono 8"
 set notification-error-bg       "#1F1F28"
 set notification-error-fg       "#FF5D62"
 set notification-warning-bg     "#1F1F28"
@@ -39,3 +41,4 @@ set render-loading-fg           "#C8C093"
 set recolor-lightcolor          "#1F1F28"
 set recolor-darkcolor           "#C8C093"
 set recolor                     "true"
+set recolor-reverse-video       "true"
