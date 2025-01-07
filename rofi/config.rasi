@@ -158,7 +158,7 @@ configuration {
       sorting-method:    "name";
   }
 }
-@theme "~/.config/rofi/rofi-collection/tokyonight/tokyonight.rasi"
+@theme "~/.config/rofi/tokyonight.rasi"
 
 listview {
     lines: 6;
