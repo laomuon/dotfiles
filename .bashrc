@@ -119,31 +119,20 @@ if ! shopt -oq posix; then
 fi
 export PATH="/home/muon/snap/deno/100/.deno/bin:$PATH"
 
-# Path for stlink
-export PATH="/home/muon/Downloads/stlink-1.7.0/:$PATH"
-export PATH="$PATH:/home/muon/qtile-env/lib/python3.11:/usr/local/Qt-6.7.2/bin/"
+export PATH="$PATH:$HOME/qtile-env/lib/python3.12"
 
 # Path for lua_ls
-export PATH="$PATH:/home/muon/lua-language-server/bin/"
+export PATH="$PATH:$HOME/lua-language-server/bin/"
 
 # Set the keybindings to vi mode
 set -o vi
-export XDG_CONFIG_HOME="/home/muon/.config/"
-. "$HOME/.cargo/env"
-export ROBOT_TEST_ENV_EXE="/home/muon/automated-testing/auto-test-venv/bin/python3.10"
+export XDG_CONFIG_HOME="$HOME/.config/"
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 
-export MVCAM_SDK_PATH=/opt/MVS
+export LD_LIBRARY_PATH=/usr/local/lib/x86_64-linux-gnu:$LD_LIBRARY_PATH
 
-export MVCAM_COMMON_RUNENV=/opt/MVS/lib
+alias luamake="$HOME/lua-language-server/3rd/luamake/luamake"
 
-export MVCAM_GENICAM_CLPROTOCOL=/opt/MVS/lib/CLProtocol
-
-export ALLUSERSPROFILE=/opt/MVS/MVFG
-export LD_LIBRARY_PATH=/usr/local/lib/x86_64-linux-gnu:/opt/MVS/lib/64:/opt/MVS/lib/32:$LD_LIBRARY_PATH
-
-alias luamake="/home/muon/lua-language-server/3rd/luamake/luamake"
-
-export PATH=$PATH:/home/muon/.spicetify
-export PATH=$PATH:/home/muon/ltex-ls-16.0.0/bin/
+export PATH=$PATH:$HOME/.spicetify
+export PATH=$PATH:$HOME/ltex-ls-16.0.0/bin/
