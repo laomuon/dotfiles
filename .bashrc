@@ -127,12 +127,19 @@ export PATH="$PATH:$HOME/lua-language-server/bin/"
 # Set the keybindings to vi mode
 set -o vi
 export XDG_CONFIG_HOME="$HOME/.config/"
+. "$HOME/.cargo/env"
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 
 export LD_LIBRARY_PATH=/usr/local/lib/x86_64-linux-gnu:$LD_LIBRARY_PATH
 
-alias luamake="$HOME/lua-language-server/3rd/luamake/luamake"
 
 export PATH=$PATH:$HOME/.spicetify
-export PATH=$PATH:$HOME/ltex-ls-16.0.0/bin/
+export PATH=$PATH:$HOME/ltex-ls-plus-18.4.0/bin/
+. "$HOME/.cargo/env"
+
+export PATH="$PATH:/opt/nvim-linux-x86_64/bin"
+
+export PATH=$PATH:/home/dmmuon/.spicetify
+
+source ~/.api_key
