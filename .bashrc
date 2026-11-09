@@ -16,8 +16,8 @@ HISTCONTROL=ignoreboth
 shopt -s histappend
 
 # for setting history length see HISTSIZE and HISTFILESIZE in bash(1)
-HISTSIZE=1000
-HISTFILESIZE=2000
+HISTSIZE=100000
+HISTFILESIZE=200000
 
 # check the window size after each command and, if necessary,
 # update the values of LINES and COLUMNS.
@@ -117,9 +117,6 @@ if ! shopt -oq posix; then
     . /etc/bash_completion
   fi
 fi
-export PATH="/home/muon/snap/deno/100/.deno/bin:$PATH"
-
-export PATH="$PATH:$HOME/qtile-env/lib/python3.12"
 
 # Path for lua_ls
 export PATH="$PATH:$HOME/lua-language-server/bin/"
@@ -131,15 +128,15 @@ export XDG_CONFIG_HOME="$HOME/.config/"
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 
-export LD_LIBRARY_PATH=/usr/local/lib/x86_64-linux-gnu:$LD_LIBRARY_PATH
+# Only add ":" when there is something after it: an empty entry means the current directory
+export LD_LIBRARY_PATH=/usr/local/lib/x86_64-linux-gnu${LD_LIBRARY_PATH:+:$LD_LIBRARY_PATH}
 
 
 export PATH=$PATH:$HOME/.spicetify
 export PATH=$PATH:$HOME/ltex-ls-plus-18.4.0/bin/
-. "$HOME/.cargo/env"
 
-export PATH="$PATH:/opt/nvim-linux-x86_64/bin"
-
-export PATH=$PATH:/home/dmmuon/.spicetify
+export PATH=$PATH:$HOME/.local/bin
+export PATH=$PATH:$HOME/harper-ls-x86_64-unknown-linux-gnu
+export MANPATH=$HOME/.local/share/man:$MANPATH
 
 source ~/.api_key
