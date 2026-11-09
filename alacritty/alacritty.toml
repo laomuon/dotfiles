@@ -35,7 +35,6 @@ background = "0x2d4f67"
 foreground = "0xc8c093"
 
 [env]
-TERM = "screen-256color"
 WINIT_X11_SCALE_FACTOR = "1.0"
 
 [font]
@@ -46,5 +45,5 @@ family = "FiraCode Nerd Font Mono"
 
 [window]
 decorations = "none"
-dynamic_title = false
-title = "Alacrity"
+dynamic_title = true
+# title = "Alacrity"
