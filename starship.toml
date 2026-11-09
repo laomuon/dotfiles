@@ -28,9 +28,9 @@ style = "yellow"
 format = "([$all_status$ahead_behind]($style) )"
 style = "red"
 
-# Show the active venv, except qtile-venv, which qtile_start.sh activates for the whole session
+# Show the active venv
 [custom.venv]
-when = '[ -n "$VIRTUAL_ENV" ] && [ "$VIRTUAL_ENV" != "$HOME/qtile-venv" ]'
+when = '[ -n "$VIRTUAL_ENV" ]'
 command = 'basename "$VIRTUAL_ENV"'
 shell = ["sh"]
 format = "[($output)]($style) "
