@@ -1,0 +1,46 @@
+# Kanagawa, matching qtile/module/kanagawa.py
+"$schema" = "https://starship.rs/config-schema.json"
+
+add_newline = false
+palette = "kanagawa"
+format = "$directory$git_branch$git_state$git_status${custom.venv}$cmd_duration$character"
+
+[palettes.kanagawa]
+blue = "#7e9cd8"
+yellow = "#c0a36e"
+green = "#76946a"
+red = "#c34043"
+magenta = "#957fb8"
+muted = "#727169"
+
+[directory]
+style = "bold blue"
+truncation_length = 4
+truncate_to_repo = false
+read_only = " ro"
+
+[git_branch]
+format = "[$symbol$branch(:$remote_branch)]($style) "
+symbol = " "
+style = "yellow"
+
+[git_status]
+format = "([$all_status$ahead_behind]($style) )"
+style = "red"
+
+# Show the active venv, except qtile-venv, which qtile_start.sh activates for the whole session
+[custom.venv]
+when = '[ -n "$VIRTUAL_ENV" ] && [ "$VIRTUAL_ENV" != "$HOME/qtile-venv" ]'
+command = 'basename "$VIRTUAL_ENV"'
+shell = ["sh"]
+format = "[($output)]($style) "
+style = "magenta"
+
+[cmd_duration]
+min_time = 3000
+format = "[$duration]($style) "
+style = "muted"
+
+[character]
+success_symbol = "[->](green)"
+error_symbol = "[->](red)"

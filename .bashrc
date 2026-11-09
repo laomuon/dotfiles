@@ -127,6 +127,10 @@ export XDG_CONFIG_HOME="$HOME/.config/"
 . "$HOME/.cargo/env"
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
+# Kanagawa colours, compact list. Ctrl+T respects .gitignore and previews files.
+export FZF_DEFAULT_OPTS='--height=40% --layout=reverse --border --color=fg:#DCD7BA,hl:#7e9cd8,fg+:#DCD7BA,bg+:#2D4F67,hl+:#72A7BC,info:#c0a36e,prompt:#76946a,pointer:#c34043,marker:#957fb8,spinner:#957fb8,header:#6a9589,border:#54546D'
+export FZF_CTRL_T_COMMAND='rg --files --hidden -g "!.git" 2>/dev/null'
+export FZF_CTRL_T_OPTS="--preview 'head -100 {}'"
 
 # Only add ":" when there is something after it: an empty entry means the current directory
 export LD_LIBRARY_PATH=/usr/local/lib/x86_64-linux-gnu${LD_LIBRARY_PATH:+:$LD_LIBRARY_PATH}
@@ -140,3 +144,6 @@ export PATH=$PATH:$HOME/harper-ls-x86_64-unknown-linux-gnu
 export MANPATH=$HOME/.local/share/man:$MANPATH
 
 source ~/.api_key
+
+# Prompt. The PS1 set above is the fallback where starship isn't installed.
+command -v starship >/dev/null && eval "$(starship init bash)"
