@@ -145,5 +145,8 @@ export MANPATH=$HOME/.local/share/man:$MANPATH
 
 source ~/.api_key
 
+# Machine-only settings, kept out of this repo
+[ -f ~/.bashrc.local ] && source ~/.bashrc.local
+
 # Prompt. The PS1 set above is the fallback where starship isn't installed.
 command -v starship >/dev/null && eval "$(starship init bash)"
