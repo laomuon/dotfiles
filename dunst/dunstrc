@@ -91,3 +91,8 @@
     highlight = "#c34043"
     # Stay on screen until dismissed
     timeout = 0
+
+# App icons, for apps that don't send their own
+[thunderbird]
+    appname = Thunderbird
+    new_icon = thunderbird
